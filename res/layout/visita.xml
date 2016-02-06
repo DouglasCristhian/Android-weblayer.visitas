@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="6dip">
+
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ChekIn"
+            android:id="@+id/BtnCheckIn"
+            android:onClick="onBtnChekin"/>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ChekOut"
+            android:id="@+id/BtnCheckOut"
+            android:onClick="onBtnChekout"/>
+
+    <TextView
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Resultado"
+            android:id="@+id/lblresultado" />
+
+    <Spinner
+            android:id="@+id/spinresultado"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Observacao"
+            android:id="@+id/lblobservacao" />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:id="@+id/txtobservacao"
+            android:maxLines="6"
+            android:scrollbars="vertical"
+            android:maxLength="1000"/>
+
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:stretchColumns="3"
+                     android:shrinkColumns="0" >
+
+
+            <TableRow android:gravity="left" android:paddingLeft="10dp">
+
+                <TextView
+                        android:paddingRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/Data"
+                        android:id="@+id/textView" android:layout_weight="0.3"/>
+
+                <TextView
+                        android:paddingRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/ChekIn"
+                        android:id="@+id/textView" android:layout_weight="0.3"/>
+
+                <TextView
+                        android:paddingRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/ChekOut"
+                        android:id="@+id/textView" android:layout_weight="0.3"/>
+
+            </TableRow>
+
+            <TableRow android:paddingTop="10dp"
+                      android:paddingBottom="20dp">
+
+                <EditText
+                        android:paddingRight="20px"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtData"
+                        android:layout_weight="0.3"/>
+
+                <EditText
+                        android:paddingRight="20px"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtChekin"
+                        android:layout_weight="0.3"/>
+
+
+                <EditText
+                        android:paddingRight="20px"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtChekout"
+                        android:layout_weight="0.3"/>
+
+            </TableRow>
+
+
+
+            <!--Restultado -->
+            <TableRow android:gravity="left" android:paddingLeft="10dp" android:id="@+id/lblresultadox">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/Resultado"
+                        android:id="@+id/lblresultadoz"
+                        android:layout_span="3"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="left" android:layout_width="fill_parent" android:paddingTop="10dp" android:id="@+id/txtresultadox"
+                      android:paddingBottom="20dp">
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtresultadoz"
+                        android:layout_span="4"
+                        />
+
+
+            </TableRow>
+
+            <!--Observacao -->
+            <TableRow android:gravity="left" android:paddingLeft="10dp" android:id="@+id/lblobservacaox">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/Observacao"
+                        android:id="@+id/lblobservacaoz"
+                        android:layout_span="3"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="left" android:layout_width="fill_parent" android:paddingTop="10dp" android:id="@+id/txtobservacaox"
+                      android:paddingBottom="20dp">
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtobservacaoz"
+                        android:layout_span="4"
+                        />
+
+
+            </TableRow>
+
+
+                <!--Contato -->
+                <TableRow android:gravity="left" android:paddingLeft="10dp">
+
+                <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/Contato"
+                            android:id="@+id/textView3"
+                            android:layout_span="3"
+                            />
+
+
+
+                </TableRow>
+
+                <TableRow android:gravity="left" android:layout_width="fill_parent" android:paddingTop="10dp"
+                          android:paddingBottom="20dp">
+                    <EditText
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtContato"
+                            android:layout_span="4"
+                            />
+
+                </TableRow>
+
+
+
+            <!--Objetivo -->
+            <TableRow android:gravity="left" android:paddingLeft="10dp">
+
+                <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/Objetivo"
+                        android:id="@+id/textView2"
+                        android:layout_span="3"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="left" android:layout_width="fill_parent" android:paddingTop="10dp"
+                      android:paddingBottom="20dp">
+
+                    <EditText
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtObjetivo"
+                            android:layout_span="4"
+                            />
+
+            </TableRow>
+
+            <!--Endereço -->
+            <TableRow android:gravity="left" android:paddingLeft="10dp" >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/Endereco"
+                        android:id="@+id/textView1"
+                        android:layout_span="3"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="left" android:layout_width="fill_parent" android:paddingTop="10dp"
+                      android:paddingBottom="20dp">
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtEndereco"
+                        android:layout_span="4"
+                        />
+
+
+            </TableRow>
+
+
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
+

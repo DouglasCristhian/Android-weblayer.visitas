@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Roteiro</string>
+    <string name="Salvar">Salvar</string>
+    <string name="Senha">Senha</string>
+    <string name="Servidor">Servidor</string>
+    <string name="ChekIn">Chek In</string>
+    <string name="ChekOut">Chek Out</string>
+    <string name="ChekOutOk">Checkout realizado com sucesso!</string>
+    <string name="ChekInOk">Checkin realizado com sucesso!</string>
+    <string name="Data">Data</string>
+    <string name="Contato">Contato</string>
+    <string name="Objetivo">Objetivo</string>
+    <string name="Endereco">Endereço</string>
+    <string name="Aguarde">Por favor, aguarde...</string>
+    <string name="Sincronizacao">Sincronização</string>
+    <string name="Sobre">Sobre</string>
+    <string name="Sair">Sair</string>
+    <string name="Configuracao">Configuração</string>
+    <string name="Atualizar">Atualizar</string>
+    <string name="Datasinc">Última sinc. em</string>
+    <string name="Usuario">Usuário</string>
+    <string name="Resultado">Resultado</string>
+    <string name="Observacao">Observação</string>
+
+
+</resources>

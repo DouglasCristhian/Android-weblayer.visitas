@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:orientation="horizontal"
+              android:layout_height="wrap_content"
+              android:paddingBottom="3dip"
+              android:paddingTop="3dip"
+              android:paddingRight="6dip">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_chekinx"
+            android:layout_marginRight="6dip"
+            />
+
+    <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium TextMedium Text"
+            android:id="@+id/txtcliente"
+            android:maxLines="3"
+            android:singleLine="false"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/txtcontato"
+            android:maxLines="3"
+            android:singleLine="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>
