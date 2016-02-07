@@ -18,6 +18,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private void teste()
     {
         int i=1+1;
+
+        int y=i+2;
     }
 
     @Override
