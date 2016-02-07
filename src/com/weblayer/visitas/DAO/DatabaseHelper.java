@@ -15,6 +15,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    private void teste()
+    {
+        int i=1+1;
+    }
 
     @Override
     public void onCreate(SQLiteDatabase database) {
