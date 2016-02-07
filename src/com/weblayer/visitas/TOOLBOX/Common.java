@@ -26,7 +26,7 @@ public class Common {
 //asdfasdfasfd
      //return System.getString(act.getContentResolver(),System.ANDROID_ID);
 
-    //}
+    ////////////}
 
 //  private void EnviarNotificacao(String titulo, String mensagem, int icon)
 //  {
