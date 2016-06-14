@@ -33,7 +33,7 @@ public class visitasSINC {
     //public final static String SOAP_ADDRESS = "http://server.weblayer.com.br/FischerBRTESTE/mobile/Service.asmx";
     //public final static String SOAP_ADDRESS = "http://10.0.2.2:52634/Vendas.asmx";
     public visitasSINC() {}
-
+    //Tentativa da correção do erro Host==null
     public static ArrayList<com.weblayer.visitas.DTO.visitasDTO> RetornaLista(Context context, String SOAP_ADDRESS,
                                                                               Integer id_empresa, Integer id_vendedor) throws Exception {
 
