@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.weblayer.visitas"
-          android:versionCode="8"
-          android:versionName="1.8">
+          package="com.weblayer.visitas" android:versionCode="9" android:versionName="1.9">
 
     <uses-sdk android:minSdkVersion="14"/>
 
@@ -10,7 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application android:label="@string/app_name" android:icon="@drawable/ic_weblayer">
 
@@ -25,8 +23,6 @@
             </intent-filter>
 
         </activity>
-
-
 
         <activity android:name="com.weblayer.visitas.VIEW.configActivity" />
         <activity android:name="com.weblayer.visitas.VIEW.loginActivity" />

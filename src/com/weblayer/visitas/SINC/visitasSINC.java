@@ -1,6 +1,7 @@
 package com.weblayer.visitas.SINC;
 import java.lang.Integer;
 import java.lang.reflect.Type;
+import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -56,11 +57,12 @@ public class visitasSINC {
 
         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         envelope.dotNet = true;
-
+        envelope.implicitTypes =true;
+        envelope.setAddAdornments(false);
         envelope.setOutputSoapObject(request);
 
         HttpTransportSE httpTransport = new HttpTransportSE(SOAP_ADDRESS,20000);
-        //httpTransport.debug = true;
+        httpTransport.debug = true;
         SoapPrimitive response = null;
 
         try {
@@ -72,7 +74,14 @@ public class visitasSINC {
 
             response = (SoapPrimitive) envelope.getResponse();
 
-        } catch (Exception e) {
+        }
+        catch (MalformedURLException e)
+        {
+            String errorMessage = "Servidor inválido";
+            Log.e("weblayer.log", errorMessage);
+            throw new RuntimeException(errorMessage);
+        }
+        catch (Exception e) {
 
             String errorMessage = (e.getMessage()==null)?"Rede não disponível":e.getMessage();
             Log.e("weblayer.log", errorMessage);
