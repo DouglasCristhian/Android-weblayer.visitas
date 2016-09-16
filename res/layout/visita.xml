@@ -9,6 +9,13 @@
 
 
     <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Reagendar"
+        android:id="@+id/BtnReagendar"
+        android:onClick="onBtnReagendar"/>
+
+    <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/ChekIn"
