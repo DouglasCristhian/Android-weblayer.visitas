@@ -184,6 +184,22 @@ public final class visitasDAO {
         }
     }
 
+    public void delete(int id) {
+
+        try {
+
+            //db.beginTransaction();
+            String delete = "DELETE FROM  " + tableName + " WHERE id='" + id + "'";
+            db.execSQL(delete);
+            //db.setTransactionSuccessful();
+
+        } catch (Exception e) {
+            Log.e("weblayer.log.visitas.Visita", "delete", e); // log the error
+        } finally {
+            //db.endTransaction();
+        }
+    }
+
 
     public visitasDTO Get(int id) {
 

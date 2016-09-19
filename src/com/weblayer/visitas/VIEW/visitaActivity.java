@@ -34,6 +34,7 @@ public class visitaActivity extends Activity
 
     private Button btnCheckin;
     private Button btnCheckout;
+    private Button btnReagendar;
     private EditText txtobsercao;
     private String id_operacao;
     private Integer id_visita;
@@ -48,14 +49,13 @@ public class visitaActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.visita);
 
-
-
         android.app.ActionBar ab = getActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
 
         btnCheckin = (Button)findViewById(R.id.BtnCheckIn);
         btnCheckout = (Button)findViewById(R.id.BtnCheckOut);
+        btnReagendar = (Button)findViewById(R.id.BtnReagendar);
 
         btnCheckout.setBackgroundColor(Color.DKGRAY);
         btnCheckin.setBackgroundColor(Color.DKGRAY);
@@ -173,8 +173,6 @@ public class visitaActivity extends Activity
         txtContato.setText(visita.getds_contato());
         txtContato.setFocusable(false);
 
-
-
         TextView lblresultado = (TextView)findViewById(R.id.lblresultado);
         TextView lblobservacao= (TextView)findViewById(R.id.lblobservacao);
         Spinner cmbresultado = (Spinner)findViewById(R.id.spinresultado);
@@ -192,6 +190,8 @@ public class visitaActivity extends Activity
 
         btnCheckout.setVisibility(View.GONE);
         btnCheckin.setVisibility(View.GONE);
+        btnReagendar.setVisibility(View.GONE);
+
         lblresultado.setVisibility(View.GONE);
         lblobservacao.setVisibility(View.GONE);
         cmbresultado.setVisibility(View.GONE);
@@ -205,13 +205,17 @@ public class visitaActivity extends Activity
         if (visita.getds_checkin().equals("")) {
 
             TabelaVisita.open();
-            boolean CheckinAtivo =TabelaVisita.CheckinAtivo(visita.getid());
+            boolean CheckinAtivo = TabelaVisita.CheckinAtivo(visita.getid());
             TabelaVisita.close();
 
-            if (CheckinAtivo)
+            if (CheckinAtivo) {
                 btnCheckin.setVisibility(View.GONE);
-            else
+                btnReagendar.setVisibility(View.GONE);
+            }
+            else {
                 btnCheckin.setVisibility(View.VISIBLE);
+                btnReagendar.setVisibility(View.VISIBLE);
+            }
         }
         else
         {
@@ -220,6 +224,7 @@ public class visitaActivity extends Activity
 
                 FillResultado();
                 btnCheckin.setVisibility(View.GONE);
+                btnReagendar.setVisibility(View.GONE);
                 btnCheckout.setVisibility(View.VISIBLE);
                 lblresultado.setVisibility(View.VISIBLE);
                 lblobservacao.setVisibility(View.VISIBLE);
@@ -375,6 +380,18 @@ public class visitaActivity extends Activity
 
     }
 
+    public void onBtnReagendar(View v) {
+
+
+        Intent i = getIntent();
+        id_visita = i.getIntExtra("id_visita", 0);
+
+        Intent intent = new Intent(this,reagendamentoActivity.class);
+        intent.putExtra("id_visita", id_visita);
+        startActivityForResult(intent, 1);
+
+    }
+
     private void FillResultado() {
 
         resultadoDAO tabresultado =  new resultadoDAO();
@@ -392,7 +409,14 @@ public class visitaActivity extends Activity
 
     }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        if (resultCode == RESULT_OK) {
+            setResult(RESULT_OK, null);
+            finish();
+        }
+
+    }
 
 
 }

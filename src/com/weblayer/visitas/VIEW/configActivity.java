@@ -68,6 +68,7 @@ public class configActivity extends Activity
 
         return super.onOptionsItemSelected(item);
     }
+
     public void onBtnconfigVoltar(View v)
     {
         finish();
