@@ -62,6 +62,7 @@ public class visitaActivity extends Activity
         SpinnerResultado = (Spinner) findViewById(R.id.spinresultado);
 
         btnCheckin.setBackgroundColor(Color.parseColor("#ff34b5e5"));
+        //btnReagendar.setBackgroundColor(Color.parseColor("#ff34b5e5"));
 
         Load();
 
@@ -78,12 +79,8 @@ public class visitaActivity extends Activity
                 {
                     if (!resultado.getid().equals("0")) {
                         btnCheckout.setBackgroundColor(Color.parseColor("#ff34b5e5"));
-
                     }
-
                 }
-
-
 
             }
 

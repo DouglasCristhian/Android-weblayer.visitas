@@ -13,21 +13,25 @@
         android:layout_height="wrap_content"
         android:text="@string/Reagendar"
         android:id="@+id/BtnReagendar"
-        android:onClick="onBtnReagendar"/>
+        android:onClick="onBtnReagendar"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_orange_light" />
 
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/ChekIn"
             android:id="@+id/BtnCheckIn"
-            android:onClick="onBtnChekin"/>
+            android:onClick="onBtnChekin"
+            android:layout_marginBottom="10dp"/>
 
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/ChekOut"
             android:id="@+id/BtnCheckOut"
-            android:onClick="onBtnChekout"/>
+            android:onClick="onBtnChekout"
+            android:layout_marginBottom="10dp"/>
 
     <TextView
             android:paddingRight="20dp"
